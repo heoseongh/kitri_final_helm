@@ -34,8 +34,7 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   hosts:
-    - host: dev.example.com
-      paths:
+     - paths:
         - path: /
           pathType: Prefix
 # livenessProbe:
