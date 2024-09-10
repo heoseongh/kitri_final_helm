@@ -1,4 +1,4 @@
-replicaCount: 1
+replicaCount: 4
 
 image:
   repository: 900603399370.dkr.ecr.ap-northeast-2.amazonaws.com/membership-service-devops
