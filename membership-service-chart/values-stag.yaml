@@ -24,7 +24,6 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   hosts:
-    - host: stag.example.com
       paths:
         - path: /
           pathType: Prefix
