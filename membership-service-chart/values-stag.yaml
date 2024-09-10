@@ -1,26 +1,16 @@
-# Default values for membership-service-chart.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
 replicaCount: 1
 
 image:
   repository: 900603399370.dkr.ecr.ap-northeast-2.amazonaws.com/membership-service-devops
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
   tag: "124a8404f4dc1516607d7c5340ae480e190271f7"
 
 fullnameOverride: "stag-membership-service"
 
 serviceAccount:
-  # Specifies whether a service account should be created
   create: false
-  # Automatically mount a ServiceAccount's API credentials?
   automount: true
-  # Annotations to add to the service account
   annotations: {}
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
   name: ""
 
 service:
