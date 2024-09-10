@@ -1,22 +1,17 @@
 replicaCount: 4
-
 image:
   repository: 900603399370.dkr.ecr.ap-northeast-2.amazonaws.com/membership-service-devops
   pullPolicy: IfNotPresent
-  tag: "124a8404f4dc1516607d7c5340ae480e190271f7"
-
+  tag: "f92251dcb01578ce7b5be76248cf0fa1b77b404f"
 fullnameOverride: "stag-membership-service"
-
 serviceAccount:
   create: false
   automount: true
   annotations: {}
   name: ""
-
 service:
   type: ClusterIP
   port: 8080
-
 ingress:
   enabled: true
   className: "alb"
@@ -24,8 +19,7 @@ ingress:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
   hosts:
-      paths:
-        - path: /
-          pathType: Prefix
-
+    paths:
+      - path: /
+        pathType: Prefix
 env: stag
